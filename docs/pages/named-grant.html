@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- параметры:
+  title: Название страницы
+  stylehref: путь к файлу main.css, в случае если страницы находятся отдельно от index.html
+  -->
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./../styles/main.css" />
+  <title>named-grant</title>
+</head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+  <div class="header__container">
+    <div class="header__body">
+      <div class="header__logo">
+        <a href="../index.html">
+          <img src="../img/logo/master-logo.svg" alt="master-logo" />
+        </a>
+      </div>
+      <div class="header__nav">
+        <nav class="header__menu menu">
+  <ul class="menu__list">
+    <li class="menu__item">
+      <a class="menu__link" href="../pages/discover.html">Discover initiatives </a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="../pages/funded-grants.html">Funded grants </a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="../pages/program.html">Program expenses </a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="../pages/blog.html">Blog </a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="../pages/faq.html">FAQ</a>
+    </li>
+  </ul>
+  <div class="header__menu-socials">
+    <ul>
+      <li>
+        <a href="#!">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7.54752 21.7512C16.6042 21.7512 21.5578 14.2479 21.5578 7.74101C21.5578 7.52789 21.5578 7.31573 21.5434 7.10453C22.507 6.40748 23.3389 5.54441 24 4.55573C23.1014 4.95413 22.148 5.21528 21.1718 5.33045C22.1998 4.71514 22.9692 3.74723 23.3366 2.60693C22.3701 3.18054 21.3126 3.58475 20.2099 3.80213C19.4675 3.01271 18.4856 2.48997 17.4162 2.31481C16.3468 2.13966 15.2494 2.32184 14.294 2.83318C13.3385 3.34452 12.5782 4.1565 12.1307 5.14348C11.6833 6.13045 11.5735 7.23739 11.8186 8.29301C9.8609 8.19481 7.94576 7.68604 6.19745 6.79973C4.44915 5.91343 2.90676 4.66939 1.6704 3.14837C1.04073 4.23236 0.847872 5.5156 1.1311 6.73679C1.41433 7.95798 2.15234 9.02532 3.19488 9.72149C2.41123 9.69853 1.64465 9.48712 0.96 9.10517V9.16757C0.960311 10.3044 1.35385 11.4062 2.07387 12.2859C2.79389 13.1657 3.79606 13.7693 4.9104 13.9944C4.18548 14.1922 3.42487 14.2211 2.68704 14.0789C3.00181 15.0573 3.61443 15.9128 4.43924 16.5259C5.26405 17.139 6.25983 17.479 7.28736 17.4985C6.26644 18.3009 5.09731 18.8942 3.84687 19.2444C2.59643 19.5947 1.28921 19.6949 0 19.5394C2.25183 20.9844 4.87192 21.7509 7.54752 21.7474"
+              fill="white"
+            />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#!">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.317 4.15508C18.7873 3.4532 17.147 2.93609 15.4319 2.63991C15.4007 2.6342 15.3695 2.64848 15.3534 2.67705C15.1424 3.05227 14.9087 3.54177 14.7451 3.92651C12.9004 3.65034 11.0652 3.65034 9.25832 3.92651C9.09465 3.53321 8.85248 3.05227 8.64057 2.67705C8.62449 2.64944 8.59328 2.63515 8.56205 2.63991C6.84791 2.93514 5.20756 3.45226 3.67693 4.15508C3.66368 4.1608 3.65233 4.17033 3.64479 4.1827C0.533392 8.83106 -0.31895 13.3652 0.0991801 17.8431C0.101072 17.865 0.11337 17.8859 0.130398 17.8992C2.18321 19.4068 4.17171 20.322 6.12328 20.9286C6.15451 20.9382 6.18761 20.9267 6.20748 20.901C6.66913 20.2706 7.08064 19.6058 7.43348 18.9068C7.4543 18.8659 7.43442 18.8173 7.39186 18.8011C6.73913 18.5535 6.1176 18.2516 5.51973 17.9088C5.47244 17.8812 5.46865 17.8135 5.51216 17.7811C5.63797 17.6869 5.76382 17.5888 5.88396 17.4897C5.90569 17.4716 5.93598 17.4678 5.96153 17.4792C9.88928 19.2725 14.1415 19.2725 18.023 17.4792C18.0485 17.4669 18.0788 17.4707 18.1015 17.4888C18.2216 17.5878 18.3475 17.6869 18.4742 17.7811C18.5177 17.8135 18.5149 17.8812 18.4676 17.9088C17.8697 18.2583 17.2482 18.5535 16.5945 18.8002C16.552 18.8163 16.533 18.8659 16.5538 18.9068C16.9143 19.6049 17.3258 20.2696 17.7789 20.9001C17.7978 20.9267 17.8319 20.9382 17.8631 20.9286C19.8241 20.322 21.8126 19.4068 23.8654 17.8992C23.8834 17.8859 23.8948 17.8659 23.8967 17.844C24.3971 12.6671 23.0585 8.17015 20.3482 4.18365C20.3416 4.17033 20.3303 4.1608 20.317 4.15508ZM8.02002 15.1165C6.8375 15.1165 5.86313 14.0308 5.86313 12.6976C5.86313 11.3643 6.8186 10.2786 8.02002 10.2786C9.23087 10.2786 10.1958 11.3738 10.1769 12.6976C10.1769 14.0308 9.22141 15.1165 8.02002 15.1165ZM15.9947 15.1165C14.8123 15.1165 13.8379 14.0308 13.8379 12.6976C13.8379 11.3643 14.7933 10.2786 15.9947 10.2786C17.2056 10.2786 18.1705 11.3738 18.1516 12.6976C18.1516 14.0308 17.2056 15.1165 15.9947 15.1165Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+        <div class="header__actions header__actions--normal-text button">
+          <a href="../pages/apply-grant.html">Apply for grant</a>
+        </div>
+        <div class="header__actions header__actions--short-text button">
+          <a href="../pages/apply-grant.html">Apply</a>
+        </div>
+        <div class="burger-icon">
+  <button class="burger-icon__button" aria-label="Open menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</div>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+      <main class="page grant">
+        <section class="grant__hero hero-grant section--first">
+          <div class="hero-grant__container __container">
+            <div class="hero-grant__img _bgi">
+              <picture><source srcset="../img/deco/grant-img.webp" type="image/webp"><img src="../img/deco/grant-img.jpg" alt="img" /></picture>
+            </div>
+          </div>
+        </section>
+        <section class="grant__about about-grant">
+          <div class="about-grant__container __container">
+            <div class="about-grant__head">
+              <div class="about-grant__category">category</div>
+              <div class="about-grant__title">
+                <h1 class="title-1">Youtube dYdX Education Library</h1>
+              </div>
+              <div class="about-grant__meta">
+                <div class="about-grant__meta-info">
+                  <span class="badge badge--with-icon badge--green"
+                    >funded
+                    <svg class="icon">
+                      <use href="../img/icons/symbol-defs.svg#_icon-fi_check"></use>
+                    </svg>
+                  </span>
+                  <dl>
+                    <dt>Funding amount:</dt>
+                    <dd>$5,000</dd>
+                  </dl>
+                </div>
+                <div class="about-grant__meta-link">
+                  <div class="button">
+                    <a href="#!">
+                      Project Link
+                      <svg class="icon">
+                        <use href="../img/icons/symbol-defs.svg#_icon-fi_external-link"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="about-grant__team">
+                <h5 class="title-5">team</h5>
+                <ul>
+                  <li class="about-grant__team-item">
+                    <a href="./grantee.html">
+                      <div class="about-grant__team-img">
+                        <picture><source srcset="../img/avatars/avatar-1.webp" type="image/webp"><img src="../img/avatars/avatar-1.jpg" alt="" /></picture>
+                      </div>
+                      <div class="about-grant__team-name">Theresa Webb</div>
+                    </a>
+                  </li>
+                  <li class="about-grant__team-item">
+                    <a href="./grantee.html">
+                      <div class="about-grant__team-img">
+                        <picture><source srcset="../img/avatars/avatar-2.webp" type="image/webp"><img src="../img/avatars/avatar-2.jpg" alt="" /></picture>
+                      </div>
+                      <div class="about-grant__team-name">Jenny Wilson</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="about-grant__content">
+              <div class="about-grant__content-item">
+                <h5 class="title-5">Description</h5>
+                <p>Grant includes work on Funding Rates page, Rewards & Tracking Simulator, and CLI Trading tool. All will be combined in a community accessible webpage that will continue to host additional work done and maintenance on behalf of Chaos Labs.</p>
+              </div>
+              <div class="about-grant__content-item">
+                <h5 class="title-5">Purpose</h5>
+                <p>Funding Rates page will help promote and guide traders around Perpetual premiums found across all assets traded on dYdX. Rewards & Tracking simulator will help market the benefits of trading on dYdX and assist current traders in mapping out their rewards. The CLI trading tool will make it easier for non-UI based traders to execute quickly on dYdX. The general purpose of this grant is to recruit Chaos Labs, a very qualified contributor, to work with dYdX on current and future projects.</p>
+              </div>
+              <div class="about-grant__content-item">
+                <h5 class="title-5">Execution</h5>
+                <p>3 months to completion. Each individual grant is estimated to take 120 days, but will be worked on concurrently.</p>
+              </div>
+              <div class="about-grant__content-item">
+                <h5 class="title-5">Payment structure</h5>
+                <p>325% upfront / 75% at completion of all Grants</p>
+              </div>
+              <div class="about-grant__content-item links">
+                <h5 class="title-5">Useful links</h5>
+                <a href="#!"
+                  >www.granttitleproject.com
+                  <svg class="icon">
+                    <use href="../img/icons/symbol-defs.svg#_icon-fi_arrow-up-right"></use>
+                  </svg>
+                </a>
+                <a href="#!"
+                  >www.granttitleproject.com
+                  <svg class="icon">
+                    <use href="../img/icons/symbol-defs.svg#_icon-fi_arrow-up-right"></use>
+                  </svg>
+                </a>
+                <a href="#!"
+                  >www.granttitleproject.com
+                  <svg class="icon">
+                    <use href="../img/icons/symbol-defs.svg#_icon-fi_arrow-up-right"></use>
+                  </svg>
+                </a>
+                <a href="#!"
+                  >www.granttitleproject.com
+                  <svg class="icon">
+                    <use href="../img/icons/symbol-defs.svg#_icon-fi_arrow-up-right"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="about-grant__content-item">
+                <h5 class="title-5">Funding transactions</h5>
+                <ul class="cards-container cards-container--vertical">
+                  <li><li>
+  <article class="expense-card">
+    <div class="expense-card__left">
+      <div class="expense-card__title title-5">Round 9</div>
+      <div class="expense-card__date">24.05.2300</div>
+      <div class="expense-card__text">Description</div>
+    </div>
+    <div class="expense-card__right">
+      <dl>
+        <dt class="expense-card__currency">$</dt>
+        <dd>250,000.00</dd>
+      </dl>
+      <a href="#!">
+        <svg class="icon icon--big">
+          <use href="@@path/img/icons/symbol-defs.svg#_icon-fi_external-link"></use>
+        </svg>
+      </a>
+    </div>
+  </article>
+</li>
+</li>
+                  <li><li>
+  <article class="expense-card">
+    <div class="expense-card__left">
+      <div class="expense-card__title title-5">Funding title</div>
+      <div class="expense-card__date">24.05.2300</div>
+      <div class="expense-card__text">Newton thought that light was made up of particles, but then it was discovered that it behaves like a wave. </div>
+    </div>
+    <div class="expense-card__right">
+      <dl>
+        <dt class="expense-card__currency">$</dt>
+        <dd>30,000.00</dd>
+      </dl>
+      <a href="#!">
+        <svg class="icon icon--big">
+          <use href="@@path/img/icons/symbol-defs.svg#_icon-fi_external-link"></use>
+        </svg>
+      </a>
+    </div>
+  </article>
+</li>
+</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="grant__more more-grant">
+          <div class="more-grant__container __container">
+            <div class="more-grant__info section__info">
+              <div class="section__info-title">
+                <h2 class="title-2">More grants like this</h2>
+              </div>
+              <div class="section__info-link">
+                <a href="#!">
+                  View all similar projects
+                  <svg class="icon icon--big">
+                    <use href="../img/icons/symbol-defs.svg#_icon-fi_arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="more-grant__content">
+              <div class="more-grant__content-cards"><article class="@@class project-card">
+  <a href="@@path/named-grant.html">
+    <div class="project-card__img ">
+      
+    </div>
+  </a>
+
+  <div class="project-card__content">
+    <a href="@@path/named-grant.html">
+      <div class="project-card__info">
+        <div class="project-card__category">category</div>
+        <div class="project-card__title">
+          <h4 class="title-4">Governance Dashboard</h4>
+        </div>
+        <div class="project-card__financing">
+          <dl>
+            <dt>Funding amount:</dt>
+            <dd>$5,000 - $6,000</dd>
+          </dl>
+        </div>
+        <div class="project-card__text">
+          <p>Newton thought that light was made up of particles, but then it was discovered that it behaves like a wave.</p>
+        </div>
+      </div>
+    </a>
+
+    <div class="project-card__avatars avatar-group">
+      <ul>
+        <li class="avatar">
+          <a href="@@path/pages/grantee.html">
+            <picture><source srcset="@@path/img/avatars/avatar-1.webp" type="image/webp"><img src="@@path/img/avatars/avatar-1.jpg" alt="avatar" /></picture>
+            <p class="avatar__name">Grantee Name</p>
+          </a>
+        </li>
+        <li class="avatar">
+          <a href="@@path/pages/grantee.html">
+            <picture><source srcset="@@path/img/avatars/avatar-2.webp" type="image/webp"><img src="@@path/img/avatars/avatar-2.jpg" alt="avatar" /></picture>
+            <span class="avatar__name">Sart John</span>
+          </a>
+        </li>
+        <li class="avatar">
+          <a href="@@path/pages/grantee.html">
+            <picture><source srcset="@@path/img/avatars/avatar-3.webp" type="image/webp"><img src="@@path/img/avatars/avatar-3.jpg" alt="avatar" /></picture>
+            <p class="avatar__name">Saphhire Saphire</p>
+          </a>
+        </li>
+        <li class="avatar avatar--last">
+          <span>+1</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
+ <article class="@@class project-card">
+  <a href="@@path/named-grant.html">
+    <div class="project-card__img _with-img">
+      
+      <picture><source srcset="@@path/img/deco/block.webp" type="image/webp"><img src="@@path/img/deco/block.jpg" alt="@@alt" /></picture>
+      
+    </div>
+  </a>
+
+  <div class="project-card__content">
+    <a href="@@path/named-grant.html">
+      <div class="project-card__info">
+        <div class="project-card__category">category</div>
+        <div class="project-card__title">
+          <h4 class="title-4">C# SDK</h4>
+        </div>
+        <div class="project-card__financing">
+          <dl>
+            <dt>Funding amount:</dt>
+            <dd>$5,000 - $6,000</dd>
+          </dl>
+        </div>
+        <div class="project-card__text">
+          <p>Newton thought that light was made up of particles, but then it was discovered that it behaves like a wave.</p>
+        </div>
+      </div>
+    </a>
+
+    <div class="project-card__avatars avatar-group">
+      <ul>
+        <li class="avatar">
+          <a href="@@path/pages/grantee.html">
+            <picture><source srcset="@@path/img/avatars/avatar-1.webp" type="image/webp"><img src="@@path/img/avatars/avatar-1.jpg" alt="avatar" /></picture>
+            <p class="avatar__name">Grantee Name</p>
+          </a>
+        </li>
+        <li class="avatar">
+          <a href="@@path/pages/grantee.html">
+            <picture><source srcset="@@path/img/avatars/avatar-2.webp" type="image/webp"><img src="@@path/img/avatars/avatar-2.jpg" alt="avatar" /></picture>
+            <span class="avatar__name">Sart John</span>
+          </a>
+        </li>
+        <li class="avatar">
+          <a href="@@path/pages/grantee.html">
+            <picture><source srcset="@@path/img/avatars/avatar-3.webp" type="image/webp"><img src="@@path/img/avatars/avatar-3.jpg" alt="avatar" /></picture>
+            <p class="avatar__name">Saphhire Saphire</p>
+          </a>
+        </li>
+        <li class="avatar avatar--last">
+          <span>+1</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
+</div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+  <div class="footer__container __container">
+    <div class="footer__body">
+      <div class="footer__logo">
+        <img src="../img/logo/master-avatar.svg" alt="" />
+      </div>
+      <nav class="footer__nav">
+        <ul class="footer__menu">
+          <li>
+            <a href="#!">About</a>
+          </li>
+          <li>
+            <a href="../pages/faq.html">FAQ</a>
+          </li>
+          <li>
+            <a href="../pages/brand-assets.html">Brand assets</a>
+          </li>
+          <li>
+            <a href="#!"
+              >dYdX Foundation
+              <svg class="icon">
+                <use href="../img/icons/symbol-defs.svg#_icon-fi_external-link"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#!"
+              >dYdX trading
+              <svg class="icon">
+                <use href="../img/icons/symbol-defs.svg#_icon-fi_external-link"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <ul class="footer__social">
+          <li>
+            <a href="#!">
+              <img src="../img/socials/twitter.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#!">
+              <img src="../img/socials/discord.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <div class="modal-overlay">
+  <div id="modal-1" class="modal">
+    <div class="modal__container">
+      <div class="modal__content">
+        <h2>ICH BIN EIN POPUP-1</h2>
+        <p>HALLO ZUSAMEN</p>
+        <span>popup 1</span>
+      </div>
+      <div class="close-btn">
+        <button id="closebtn">X</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-2" class="modal">
+    <div class="modal__container">
+      <div class="modal__content">
+        <h2>ICH BIN EIN POPUP-2</h2>
+        <p>HALLO ZUSAMEN</p>
+        <span>popup 2</span>
+      </div>
+      <div class="close-btn">
+        <button id="closebtn">X</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-3" class="modal">
+    <div class="modal__container">
+      <div class="modal__content">
+        <h2>ICH BIN EIN POPUP-3</h2>
+        <p>HALLO ZUSAMEN</p>
+        <span>popup 3</span>
+
+        <div class="popup-window">
+          <h2>нажми на кнопку</h2>
+          <button
+            class="_open-modal-btn"
+            data-modal-id="modal-4"
+            id="popupOpen"
+          >
+            открыть popup
+          </button>
+        </div>
+      </div>
+      <div class="close-btn">
+        <button id="closebtn">X</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-4" class="modal">
+    <div class="modal__container">
+      <div class="modal__content">
+        <h2>ICH BIN EIN POPUP-4</h2>
+        <p>HALLO ZUSAMEN</p>
+        <span>popup 4</span>
+        <div class="popup-window">
+          <h2>нажми на кнопку</h2>
+          <button
+            class="_open-modal-btn"
+            data-modal-id="modal-1"
+            id="popupOpen"
+          >
+            открыть popup
+          </button>
+        </div>
+      </div>
+      <div class="close-btn">
+        <button id="closebtn">X</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./../scripts/runtime.js"></script>
+    <script src="./../scripts/main.js"></script>
+  </body>
+</html>
