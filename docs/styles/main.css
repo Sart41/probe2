@@ -396,7 +396,7 @@ section.section--first {
 
 .oval::after {
   content: "";
-  background: url("/img/deco/oval.svg") center no-repeat;
+  background: url("../img/deco/oval.svg") center no-repeat;
   background-size: cover;
   width: 230px;
   width: 138.0116959064%;
